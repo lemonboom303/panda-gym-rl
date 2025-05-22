@@ -16,11 +16,11 @@ def evaluate_model(model_path="./logs/best_model.zip", render=True, episodes=5):
             obs, reward, terminated, truncated, _ = env.step(action)
             total_reward += reward
             done = terminated or truncated
-            time.sleep(0.03)  # 加这个防止窗口闪退太快
+            time.sleep(0.03) 
         print(f"Episode {ep+1}: Reward = {total_reward:.2f}")
 
     env.close()
-    input("测试完成，按任意键关闭窗口...")  # 防止窗口一闪而过
+    input("测试完成，按任意键关闭窗口...")  
 
 if __name__ == "__main__":
     evaluate_model()
