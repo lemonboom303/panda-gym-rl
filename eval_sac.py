@@ -20,13 +20,13 @@ def evaluate_model(model_path="sac_panda_reach", episodes=5):
             total_reward += reward
             done = terminated or truncated
 
-            time.sleep(1 / 60)  # 模拟 60 FPS，窗口可视化动作
+            time.sleep(1 / 60)  
 
         print(f"Episode {episode + 1}: Reward = {total_reward:.2f}")
-        time.sleep(2)  # 每轮结束后暂停2秒以观察结果
+        time.sleep(2)  
 
     print("Evaluation finished. Keeping window open...")
-    time.sleep(10)  # 保持窗口 10 秒避免自动关闭
+    time.sleep(10)  
     env.close()
 
 if __name__ == "__main__":
